@@ -275,12 +275,12 @@
 
     <property>
         <name>yarn.resourcemanager.address</name>
-        <value>sandbox.hortonworks.com:8050</value>
+        <value>hostname:8032</value>
     </property>
 
     <property>
         <name>yarn.resourcemanager.admin.address</name>
-        <value>sandbox.hortonworks.com:8141</value>
+        <value>hostname:8033</value>
     </property>
 
     <property>
@@ -335,7 +335,7 @@
 
     <property>
         <name>yarn.resourcemanager.resource-tracker.address</name>
-        <value>sandbox.hortonworks.com:8025</value>
+        <value>sandbox.hortonworks.com:8031</value>
     </property>
 
     <property>

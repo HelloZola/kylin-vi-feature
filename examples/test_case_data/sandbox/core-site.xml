@@ -18,7 +18,7 @@
 
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://sandbox.hortonworks.com:8020</value>
+        <value>hdfs://hostname:9000</value>
     </property>
 
     <property>
