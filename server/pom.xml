@@ -252,6 +252,12 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+        </dependency>
+
         <!--
            The Hadoop provided guava could disappoint calcite's demand.
            E.g. the provided could be: /usr/hdp/2.4.0.0-169/hadoop/lib/guava-11.0.2.jar - com/google/common/collect/ImmutableSortedMap.class

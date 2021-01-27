@@ -19,6 +19,7 @@
 package org.apache.kylin.rest.service;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +27,7 @@ import org.apache.kylin.common.util.LocalFileMetadataTestCase;
 import org.apache.kylin.metadata.badquery.BadQueryEntry;
 import org.apache.kylin.metadata.badquery.BadQueryHistory;
 import org.apache.kylin.metadata.badquery.BadQueryHistoryManager;
+import org.apache.kylin.source.hive.HiveJdbcDemo;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -58,6 +60,14 @@ public class DiagnosisServiceTest extends LocalFileMetadataTestCase {
         obj = diagnosisService.getQueries(0, 10, BadQueryEntry.ADJ_SLOW, allEntries).get("badQueries");
         List<BadQueryEntry> slowList = (List<BadQueryEntry>) obj;
         Assert.assertEquals(2, slowList.size());
+    }
 
+    @Test
+    public void testHive(){
+        try {
+            HiveJdbcDemo.select();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

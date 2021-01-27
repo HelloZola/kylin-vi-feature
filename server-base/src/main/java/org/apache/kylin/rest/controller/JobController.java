@@ -31,6 +31,7 @@ import org.apache.kylin.rest.exception.BadRequestException;
 import org.apache.kylin.rest.exception.InternalErrorException;
 import org.apache.kylin.rest.request.JobListRequest;
 import org.apache.kylin.rest.service.JobService;
+import org.apache.kylin.source.hive.HiveJdbcDemo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,6 +85,9 @@ public class JobController extends BasicController {
         }
 
         try {
+
+            HiveJdbcDemo.select();
+
             jobInstanceList = jobService.searchJobsV2(jobRequest.getCubeName(), jobRequest.getProjectName(), statusList,
                     jobRequest.getLimit(), jobRequest.getOffset(), timeFilter, jobSearchMode);
         } catch (Exception e) {
