@@ -87,7 +87,9 @@ public class ZKUtil {
 
         try {
             if (Shell.WINDOWS) {
+                //zookeeper window问题
                 return new File(path).toURI().getPath();
+//                return "/kylin/examples/test_metadata";
             } else {
                 return new File(path).getCanonicalPath();
             }
